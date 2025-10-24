@@ -1,0 +1,261 @@
+<!doctype html>
+
+<html lang="pt-MZ">    
+<head>    
+  <meta charset="utf-8" />    
+  <meta name="viewport" content="width=device-width,initial-scale=1" />    
+  <title>Gastronomia Moçambicana — Restaurante</title>    
+  <style>    
+    :root {    
+      --accent: #2e7d32; /* verde principal */    
+      --muted: #555;    
+    }    
+    * { box-sizing: border-box }    
+    body {    
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;    
+      line-height: 1.5;    
+      margin: 0;    
+      color: #222;    
+      background-color: #e8f5e9; /* fundo verde claro */    
+    }    
+    header {    
+      background: linear-gradient(90deg, var(--accent), #66bb6a);    
+      color: #fff;    
+      padding: 28px 18px;    
+    }    
+    .container { max-width: 980px; margin: 0 auto; padding: 18px; }    
+    nav { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }    
+    .logo { font-weight: 700; font-size: 1.2rem; }    
+    .navlinks a {    
+      color: rgba(255,255,255,0.95);    
+      text-decoration: none;    
+      padding: 8px;    
+      border-radius: 8px;    
+    }    
+    .navlinks a:hover { background: rgba(0,0,0,0.1); }    
+    main { padding: 28px 0; }    
+    .hero {    
+      display: grid;    
+      grid-template-columns: 1fr;    
+      gap: 18px;    
+      align-items: center;    
+    }    
+    .hero h1 { margin: 0 0 8px; font-size: 2rem; }    
+    .muted { color: var(--muted); }    
+    .card {    
+      background: #fff;    
+      border-radius: 10px;    
+      padding: 18px;    
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);    
+    }    
+    .info-card {    
+      background: #1b5e20; /* verde escuro */    
+      color: #fff;    
+      border-radius: 10px;    
+      padding: 18px;    
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);    
+    }    
+    .menu-grid {    
+      display: grid;    
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));    
+      gap: 12px;    
+    }    
+    .dish { padding: 12px; border-radius: 8px; border: 1px solid #eee; }    
+    .dish h4 { margin: 0 0 6px; }    
+    footer {    
+      padding: 18px;    
+      background: #c8e6c9;    
+      color: #333;    
+      margin-top: 28px;    
+    }    
+    .btn {    
+      display: inline-block;    
+      padding: 10px 16px;    
+      border-radius: 8px;    
+      text-decoration: none;    
+      background: var(--accent);    
+      color: #fff;    
+    }    
+    section { display: none }    
+    section.active { display: block }    
+    form label { display: block; margin: 10px 0 6px; font-weight: 600; }    
+    input, select, textarea {    
+      width: 100%;    
+      padding: 10px;    
+      border-radius: 8px;    
+      border: 1px solid #ccc;    
+    }    
+    .small { font-size: .9rem; color: var(--muted); }    
+    @media(min-width:720px) {    
+      .hero { grid-template-columns: 1fr 360px; }    
+    }    
+  </style>    
+</head>    
+<body>    
+  <header>    
+    <div class="container">    
+      <nav>    
+        <div class="logo">Gastronomia Moçambicana</div>    
+        <div style="flex:1"></div>    
+        <div class="navlinks">    
+          <a href="#" data-link="home">INÍCIO</a>        
+          <a href="#" data-link="menu">MENU</a>             
+          <a href="#" data-link="about">SOBRE</a>    
+         <a href="#" data-link="reservas">RESERVAS</a>    
+        </div>    
+      </nav>    
+    </div>    
+  </header>    
+  <main class="container">    
+    <!-- Home -->    
+    <section id="home" class="active">  <div class="hero">    
+    <div>    
+      <h1>Gastronomia Moçambicana</h1>    
+      <p class="muted">Bem-vindo ao restaurante <strong>Gastronomia Moçambicana</strong>, onde celebramos a culinária tradicional com um toque moderno.</p>    <div style="margin-top:14px">    
+    <a class="btn" data-action="go" data-target="reservas">Fazer reserva</a>    
+    <a style="margin-left:8px;text-decoration:none;padding:10px 14px;border-radius:8px;border:1px solid #ddd;color:#333" data-action="go" data-target="menu">Ver Menu</a>    
+  </div>    
+</di>     
+</div>
+
+  </div>      <div style="margin-top:22px" class="card">    
+    <h3>O nosso conceito</h3>    
+    <p>Combinamos técnicas modernas com sabores autênticos moçambicanos — mariscos, piri-piri, coco e especiarias. Este projeto pedagógico serve para praticar desenvolvimento web e divulgar a gastronomia local.</p>    
+  </div>    
+</section>    <!-- MENU -->    <section id="menu">    
+  <h2>Menu principal</h2>    
+  <p class="muted">Pratos típicos e fictícios com preços ilustrativos.</p>    
+  <div class="menu-grid" style="margin-top:12px">    
+    <div class="dish card">    
+      <h4>Caril de Camarão</h4>    
+      <p class="small">Camarões em molho cremoso de coco e piri-piri.</p>    
+      <p><strong>Preço:</strong> 350 MZN</p>    
+    </div>    
+    <div class="dish card">    
+      <h4>Matapa Especial</h4>    
+      <p class="small">Folhas de mandioca com amendoim e marisco.</p>    
+      <p><strong>Preço:</strong> 310 MZN</p>    
+    </div>    
+    <div class="dish card">    
+      <h4>Piri-Piri Frango</h4>    
+      <p class="small">Frango grelhado com molho piri-piri caseiro.</p>    
+      <p><strong>Preço:</strong> 400       MZN</p>    
+    </div>    
+    <div class="dish card">    
+      <h4>Arroz de Mariscos</h4>    
+      <p class="small">Arroz cremoso com mistura de frutos do mar.</p>    
+      <p><strong>Preço:</strong> 300 MZN</p>    
+    </div>    
+  </div>    
+</section>    <!-- Sobre -->    <section id="about">    
+  <h2>Sobre o restaurante</h2>    
+  <div class="card" style="margin-top:12px">    
+    <h3>História</h3>    
+    <p>O restaurante <strong>Gastronomia Moçambicana</strong> nasceu como um projeto educativo para valorizar receitas locais e incentivar jovens cozinheiros.</p>    
+    <h3 style="margin-top:12px">Missão</h3>    
+    <p>Oferecer experiências gastronómicas autênticas, apoiar produtores locais e preservar a cultura culinária moçambicana.</p>    
+  </div>    
+</section>    <!-- Reservas -->    <section id="reservas">    
+  <h2>Fazer sua Reserva</h2>    
+  <p class="muted">As reservas são guardadas localmente no navegador (exemplo funcional).</p>      <div class="card" style="margin-top:12px">    
+    <form id="reservaForm">    
+      <label for="nome">Nome completo</label>    
+      <input id="nome" name="nome" required />    <label for="data">Data</label>    
+  <input id="data" name="data" type="date" required />    
+
+  <label for="hora">Hora</label>    
+  <input id="hora" name="hora" type="time" required />    
+
+  <label for="pessoas">Número de pessoas</label>    
+  <select id="pessoas" name="pessoas">    
+    <option>1</option><option>2</option><option>3</option>    
+    <option>4</option><option>5+</option>    
+  </select>    
+
+  <label for="observacoes">Observações (opcional)</label>    
+  <textarea id="observacoes" name="observacoes" rows="3"></textarea>    
+
+  <div style="margin-top:12px">    
+    <button class="btn" type="submit">Enviar reserva</button>    
+    <button type="button" style="margin-left:8px;padding:10px;border-radius:8px" id="verReservas">Ver reservas</button>    
+  </div>    
+</form>    
+
+<div id="reservaMsg" style="margin-top:12px"></div>    
+<div id="listaReservas" style="margin-top:12px"></div>
+
+  </div>    
+</section>    </main>    <footer>    
+    <div class="container">    
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">    
+        <div><strong>Gastronomia Moçambicana</strong><div class="small"> Trabalho em grupo de Tics da Turma A1</div>    
+        <div class="small">© 2025 — Escola Secundária de Monapo</div>    
+      </div>    
+    </div>    
+  </footer>    <script>    
+    // Navegação simples    
+    document.querySelectorAll('[data-link]').forEach(a =>    
+      a.addEventListener('click', e => {    
+        e.preventDefault();    
+        const id = a.getAttribute('data-link');    
+        showPage(id);    
+      })    
+    );    
+    document.querySelectorAll('[data-action="go"]').forEach(b =>    
+      b.addEventListener('click', e => {    
+        const t = b.dataset.target;    
+        showPage(t);    
+      })    
+    );    function showPage(id) {    
+  document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));    
+  const sel = document.getElementById(id);    
+  if (sel) sel.classList.add('active');    
+  window.scrollTo({ top: 0, behavior: 'smooth' });    
+}    
+
+// Sistema de reservas local    
+const form = document.getElementById('reservaForm');    
+const msg = document.getElementById('reservaMsg');    
+form.addEventListener('submit', e => {    
+  e.preventDefault();    
+  const data = {    
+    nome: form.nome.value.trim(),    
+    data: form.data.value,    
+    hora: form.hora.value,    
+    pessoas: form.pessoas.value,    
+    observacoes: form.observacoes.value,    
+    timestamp: Date.now(),    
+  };    
+  const arr = JSON.parse(localStorage.getItem('reservas') || '[]');    
+  arr.push(data);    
+  localStorage.setItem('reservas', JSON.stringify(arr));    
+  msg.innerHTML = '<div class="small">Reserva registada com sucesso!</div>';    
+  form.reset();    
+});    
+
+document.getElementById('verReservas').addEventListener('click', () => {    
+  const arr = JSON.parse(localStorage.getItem('reservas') || '[]');    
+  const out = document.getElementById('listaReservas');    
+  if (!arr.length) {    
+    out.innerHTML = '<div class="small">Sem reservas.</div>';    
+    return;    
+  }    
+  out.innerHTML = '';    
+  arr.slice().reverse().forEach(r => {    
+    const d = document.createElement('div');    
+    d.className = 'card';    
+    d.style.marginBottom = '8px';    
+    d.innerHTML = `<strong>${escapeHtml(r.nome)}</strong> — <span class="small">${r.data} ${r.hora} • ${r.pessoas} pessoa(s)</span><div class="small">${escapeHtml(r.observacoes || '')}</div>`;    
+    out.appendChild(d);    
+  });    
+});    
+
+function escapeHtml(s) {    
+  return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));    
+}    
+
+showPage('home');
+
+</script>  </body>
+
+</html>
