@@ -1,0 +1,33 @@
+<section id="reservas">
+  <h2>Fazer sua Reserva</h2>
+  <p>As reservas são guardadas localmente no navegador ().</p>
+
+  <form id="formReserva">
+    <label for="nome">Nome completo</label>
+    <input id="nome" name="nome" type="text" required />
+
+    <label for="data">Data</label>
+    
+    <input id="data" name="data" type="date" required />
+
+    <label for="hora">Hora</label>
+    <input id="hora" name="hora" type="time" required />
+
+    <label for="pessoas">Número de pessoas</label>
+    <select id="pessoas" name="pessoas">
+      <option>1</option><option>2</option><option>3</option>
+      <option>4</option><option>5+</option>
+    </select>
+
+    <label for="observacoes">Observações (opcional)</label>
+    <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+
+    <div style="margin-top:12px">
+      <button class="btn" type="submit">Enviar reserva</button>
+      <button type="button" style="margin-left:8px;padding:10px;border-radius:8px" id="verReservas">Ver reservas</button>
+    </div>
+  </form>
+
+  <div id="reservaMsg" style="margin-top:12px"></div>
+  <div id="listaReservas" style="margin-top:12px"></div>
+</section>
